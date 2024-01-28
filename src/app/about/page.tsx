@@ -111,6 +111,7 @@ function page() {
               ></path>
             </svg>
             <span className="text-gray-500">Email: info@prompterwave.com</span>
+
           </div>
           <div className="flex items-center space-x-4">
             <svg

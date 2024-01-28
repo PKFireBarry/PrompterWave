@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   CardTitle,
@@ -21,7 +21,7 @@ function History() {
   const { user } = useUser();
   const email = user?.primaryEmailAddress?.emailAddress;
 
-  async function fetchData() {
+  const fetchData = useCallback(async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "db")); // Replace 'Ideas' with your actual collection name
       const data: any = [];
@@ -29,35 +29,29 @@ function History() {
       querySnapshot.forEach((doc) => {
         const entry = { id: doc.id, email, ...doc.data() };
 
-        // Move the condition inside the loop to filter entries by email
         if (entry.email === email) {
           data.push(entry);
         }
       });
 
-      // Now 'data' contains an array of objects where each object has an 'id' field and the data from the document
-
-      // Assuming setHistory is a function to update the state or perform some action
       setHistory(data);
-
       return data;
     } catch (error) {
       console.error("Error fetching data:", error);
       return [];
     }
-  }
+  }, [email]);
 
   // Call fetchData within a function or component
-  async function fetchDataAndDoSomething() {
+  const fetchDataAndDoSomething = useCallback(async () => {
     try {
       const data = await fetchData();
-
       setHistory(data);
       // Do something with the fetched data
     } catch (error) {
       console.error("Error:", error);
     }
-  }
+  }, [fetchData]);
 
   useEffect(() => {
     const fetchDataAndDoSomething = async () => {

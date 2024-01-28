@@ -433,9 +433,10 @@ function Dashboard() {
                       Prompt Constants{" "}
                     </Label>
                   </HoverCardTrigger>
-<HoverCardContent className="outline">
+                  <HoverCardContent className="outline">
   Prompts are crucial components in the realm of Stable Diffusion, acting as the foundational blueprint from which AI algorithms create unique pieces of art. Think of prompt constants like things you want to be consistent throughout many different photographs you wish to create. This can be helpful for keeping a subject the same while altering the environment/location around it.
 </HoverCardContent>
+
 
                 </HoverCard>
 
@@ -461,13 +462,9 @@ function Dashboard() {
                     </Label>
                   </HoverCardTrigger>
                   <HoverCardContent className="outline">
-                    Negative prompts are basically text representations of what
-                    you do not want to see in the image you're trying to
-                    generate. The negative prompt is an additional way to nudge
-                    Stable Diffusion to give you what you want. A negative
-                    prompt removes objects or styles in a way that may not be
-                    possible by tinkering with a positive prompt alone.
-                  </HoverCardContent>
+  Negative prompts are basically text representations of what you do not want to see in the image you&apos;re trying to generate. The negative prompt is an additional way to nudge Stable Diffusion to give you what you want. A negative prompt removes objects or styles in a way that may not be possible by tinkering with a positive prompt alone.
+</HoverCardContent>
+
                 </HoverCard>
 
                 <Textarea

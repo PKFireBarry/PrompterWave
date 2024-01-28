@@ -27,10 +27,11 @@ function page() {
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                 The journey of Prompter Wave began with a personal struggle – a challenge I faced in achieving good stable diffusion prompts. 
-                While I excelled in using the software i couldnt create captivating images, I found myself lacking the creative spark to generate interesting subjects that aligned seamlessly with my initial concepts. 
-                This gap between imagination and execution led me to envision a solution, and that's how Prompter Wave came into existence.
+                While I excelled in using the software, I couldn&apos;t create captivating images. I found myself lacking the creative spark to generate interesting subjects that aligned seamlessly with my initial concepts. 
+                This gap between imagination and execution led me to envision a solution, and that&apos;s how Prompter Wave came into existence.
                 This platform serves as a dedicated space to brainstorm ideas, refine concepts, and ultimately achieve the perfect balance between creativity and promptability in Stable Diffusion.
                 </p>
+
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl mt-4 dark:text-gray-400">
                 
 
